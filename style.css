@@ -16,22 +16,23 @@ body {
 }
 
 #left-content {
-  margin-top: 15vh;
-  width: 14vw;
+  width: 18vw;
   float: left;
   clear: left;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
 }
 
 .wrapper h1 {
   text-align: center;
   font-size: 50px;
   margin-bottom: 35px;
+  margin-top: 20px;
 }
 
-#controls {
+#controls, form {
   background-color: white;
   color: black;
   display: flex;
@@ -41,6 +42,22 @@ body {
   width: 100%;
   padding: 20px;
   align-items: center;
+  margin-top: 20px;
+}
+
+#rover-data {
+  height: 60vh;
+  overflow: scroll;
+}
+
+#rover-data label {
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+#rover-data select {
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
 #controls input, #controls select {
@@ -78,4 +95,30 @@ body {
 
 .fas {
   cursor: pointer;
+}
+
+#no-photos-msg {
+  text-align: center;
+  color: red;
+  padding-bottom: 10px;
+  display: none;
+}
+
+#spinner {
+  width: 60px;
+}
+
+#spinner1 {
+  width: 60px;
+  margin-top: 40%;
+}
+
+#mars-photo {
+  max-height: 90vh;
+  max-width: 65vw;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }

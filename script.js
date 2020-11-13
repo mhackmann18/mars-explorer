@@ -5,7 +5,7 @@ const makeRequest = (method, url, callback) => {
             
   xmlHttp.onload = () => {
     if(xmlHttp.status == 200) {
-      callback(JSON.parse(xmlHttp.response));
+      callback(xmlHttp.response);
     } else {
       console.log("There was an error processing the request");
     }

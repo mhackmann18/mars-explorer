@@ -1,3 +1,10 @@
+<!--
+name: Matt Hackmann
+pawprint: mdhtf3
+date: 11/13/20
+challenge: AJAX Fall 2020
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,20 +18,30 @@
 <body>
   <div class="wrapper">
     <div id="left-content">
-      <h1>Mars Explorer</h1>
       <form id="controls">
         <label for="martian-sol">Martian Sol</label>
         <input type="number" min="0" name="martian-sol" id="martian-sol" required>
-        <label for="camera">Camera</label>
-        <select name="camera" id="">
-          <option value=""></option>
+        <p id="no-photos-msg">No photos available for this martian sol. Please select another.</p>
+        <label for="camera-select">Camera</label>
+        <select name="camera" id="camera-select">
         </select>
         <button>Query API</button>
       </form>
+      <form id="rover-data">
+        <label for="rover-select">Rover Name:</label>
+        <select name="rover" id="rover-select">
+        </select>
+        <img id="spinner1" src="./spinner1.gif" alt="loading">
+        <label id="launch-date"></label>
+        <p id="rover-description"></p>
+      </form>
     </div>
     <div id="right-content">
-      <!-- <i class="fas fa-chevron-left chevron-left fa-3x"></i>
-      <i class="fas fa-chevron-right chevron-right fa-3x"></i> -->
+      <i class="fas fa-chevron-left chevron-left fa-3x"></i>
+      <img id="spinner" src="./spinner.gif" alt="loading...">
+      <div id="photos">
+      </div>
+      <i class="fas fa-chevron-right chevron-right fa-3x"></i>
     </div>
   </div>
 
